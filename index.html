@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 4</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+          <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+          <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "8_VsjgD-Gh8FMTDUn",
+      });
+   })();
+</script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>Logo</h2>
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                 <li><a href="#">Services</a></li>
+                  <li><a href="#">About Us</a></li>
+                   <li><a href="#"> Contact Us</a></li>
+            </ul>
+
+        </nav>
+        <div class="username">
+            <h2>Username</h2>
+
+        </div>
+
+    </header>
+    
+    <section class="section-main">
+
+    <section class="section-hero">
+        <div class="left-div">
+            <div class="tagline">
+                <h1>
+                    Revitalize Your Clothes with Our Expert <span style="color:#0099FF">Laundry Services!</span> 
+                </h1>
+
+
+            </div>
+            <div class="tag-paragraph">
+               </ion-icon> <p>From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and rediscover the freshness of your clothes today!
+
+                </p>
+
+            </div>
+            <div class="booking-btn">
+                <div class="contain"    >
+                <ion-icon class="icon" name="calendar-number-outline"></ion-icon><a  href="#booking">Book a Service today!</a>
+                  </div>
+            </div>
+        </div>
+        <div class="right-div">
+            <div class="hero-image">
+                <img src="resources/img/washing.png" alt="">
+
+            </div>
+           
+    </section>
+    <section class="hero-footer">
+        <div class="main-container">
+            <div class="left-div">
+                <h2>Our Achievemnts</h2>
+            </div>
+            <div class="right-div">
+
+                <div class="feature">
+                   <div class="title"><h3>15+</h3></div> 
+                   <div class="description"> <p>Years of Experience</p></div>
+                </div>
+                 <div class="feature">
+                   <div class="title"><h3>240+</h3></div> 
+                   <div class="description"> <p>Happy Customers</p></div>
+                </div>
+                 <div class="feature">
+                   <div class="title"><h3>2+ Yrs </h3></div> 
+                   <div class="description"> <p> Experience</p></div>
+                </div>
+            </div>
+         </div>
+
+    </section>
+    </section>
+
+    <section class="section-booking" id="booking">
+            <div class="container" id="">
+
+    <div class="services">
+        <h2>Our Services</h2>
+        <p>Click On The Add To Cart Button To Add The Services To Your Cart</p>
+
+        <div id="serviceList"></div>
+        
+    </div>
+
+
+    <div class="cart" id="container">
+        <h2>Added Items</h2>
+
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Service Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="cartBody"></tbody>
+        </table>
+
+        <div class="total" id="total">
+            <h3>Total Amount:</h3>
+            <span id="totalAmount">₹0.00</span>
+        </div>
+
+        <h2>Book Now</h2>
+
+        <form>
+            <input type="text" id="name" placeholder="Full Name" required />
+            <input type="email" id="email" placeholder="Email ID" required />
+            <input type="number" id="number" placeholder="Phone Number" required />
+            <button type="button" id="book-btn" onclick="sendemails()">Book Now</button>
+        </form>
+    </div>
+    </div>
+
+    </section>
+    <footer>
+        <div class="features">
+
+            <div class="feature">
+                <div class="feature-image">
+                    <img width="100" height="100" src="https://img.icons8.com/carbon-copy/100/washing-machine.png" alt="washing-machine"/>
+                </div>
+                <div class="feature-title">
+                    <h3>Premium Services</h3>
+
+                </div>
+                <div class="feature-para">
+                    <p>Elevate your wardrobe with our meticulous dry cleaning, ensuring garments look and feel as good as new.</p>
+                </div>
+            
+            </div>
+
+            <div class="feature">
+                <div class="feature-image">
+                   <img width="64" height="64" src="https://img.icons8.com/wired/64/customer-support.png" alt="customer-support"/>
+
+                </div>
+                <div class="feature-title">
+                    <h3>Quick Support</h3>
+
+                </div>
+                <div class="feature-para">
+                  <p>We’re committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
+                    
+                </div>
+            
+            </div>
+            
+
+            <div class="feature">
+                <div class="feature-image">
+<img width="50" height="50" src="https://img.icons8.com/ios/50/delivery--v1.png" alt="delivery--v1"/>
+                </div>
+                <div class="feature-title">
+                    <h3>Fast Delivery</h3>
+
+                </div>
+                <div class="feature-para">
+                   <p>Enjoy seamless service with our convenient pickup and delivery options, tailored to your schedule.</p>
+                    
+                </div>
+            
+            </div>
+            
+
+            <div class="feature">
+                <div class="feature-image">
+<img width="50" height="50" src="https://img.icons8.com/ios/50/get-cash--v1.png" alt="get-cash--v1"/>
+                </div>
+                <div class="feature-title">
+                    <h3>Affordable Price</h3>
+
+                </div>
+                <div class="feature-para">
+                   <p>Experience exceptional care without breaking the bank – our affordable prices make laundry day stress-free.</p>
+                </div>
+            
+            </div>
+            
+            
+        </div>
+
+        <div class="newsletter">
+            <div class="title">
+                <h2>Subscribe to Our newsletter</h2>
+            </div>
+            <div class="form-newsletter">
+                <form action="#" class="newsletter-form">
+                    
+                   
+                    <div class="input">
+                        <input type="text" placeholder="Enter Your Full Name">
+                    </div>
+
+                    
+                    <div class="input">
+                        <input type="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="input">
+                        <button type="submit" onclick="sendemails()">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="final-footer">
+            <div class="comt">
+            <div class="div1">
+                <div class="main-title">
+                    <h2>Logo</h2>
+
+                </div>
+                <div class="ttle">
+                    <h3>About US</h3>
+
+                </div>
+                <div class="content">
+                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos!</P>
+
+                </div>
+
+            </div>
+            <div class="div2">
+                  <div class="ttle">
+                    <h3>Important Links</h3>
+
+                </div>
+                <div class="content">
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="#">Refund policy</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="div3">
+                  <div class="ttle">
+                    <h3>Contact</h3>
+
+                </div>
+                <div class="content">
+                    <ul>
+                        <li><a href="#">mail@123.com</a></li>
+                         <li><a href="#">123456789</a></li>
+                    </ul>
+                    
+                </div>
+
+
+            </div>
+            <div class="div4">
+                  <div class="ttle">
+                    <h3>Follow Us</h3>
+
+                </div>
+                <div class="content">
+                    <ul class="socials">
+                        <li>
+                            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        </li>
+                         <li>
+                            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        </li>
+                         <li>
+                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        </li>
+                         <li>
+                            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+
+            </div>
+            </div> .
+        </div>
+
+    </footer>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script> 
+   <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script> 
+<script src="resources/js/main.js"></script>
+</body>
+</html>
