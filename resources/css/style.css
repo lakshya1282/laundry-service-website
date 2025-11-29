@@ -78,9 +78,10 @@ nav a:hover{
 .contain a{ color:white; text-decoration:none; }
 
 /* hero footer */
-.hero-footer{ height:20vh; background-color:#0099FF; margin-top:50px; display:flex; align-items:center; justify-content:center; color:white; }
-.main-container{ display:flex; align-items:center; justify-content:center; gap:150px; width:100%; }
-.left-div h2{ font-size:2.5rem; }
+#hero-footer{ height:20vh; background-color:#0099FF; margin-top:50px; display:flex; align-items:center; justify-content:center; color:white; }
+#main-container{ display:flex; align-items:center; justify-content:center; gap:150px; width:100%; }
+
+#left-div h2{ font-size:2.5rem; }
 
 /* booking / services area */
 .section-booking{
