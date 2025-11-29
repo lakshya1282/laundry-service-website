@@ -9,7 +9,7 @@
 body{
   font-family: 'Open Sans', Arial, sans-serif;
   color: #333;
-  background: #f6f8fa;
+  background: white;
 }
 
 /* header */
@@ -30,6 +30,8 @@ header{
 nav ul{
     display:flex;
     gap:20px;
+    list-style:none;
+
 }
 nav a{
     text-decoration: none;
@@ -79,9 +81,16 @@ nav a:hover{
 
 /* hero footer */
 #hero-footer{ height:20vh; background-color:#0099FF; margin-top:50px; display:flex; align-items:center; justify-content:center; color:white; }
-#main-container{ display:flex; align-items:center; justify-content:center; gap:150px; width:100%; }
+#main-container{ display:flex; align-items:center; justify-content:center; gap:250px; width:100%; }
 
 #left-div h2{ font-size:2.5rem; }
+#right-div{
+  display:flex;
+  gap:2rem;
+  font-size: 1.2rem;
+
+
+}
 
 /* booking / services area */
 .section-booking{
@@ -250,19 +259,21 @@ form button {
 
 /* footer & other sections (kept from original, minor tweaks) */
 footer{
-  margin:2rem auto;
+  margin-top:2rem ;
   font-family:sans-serif;
-  padding: 40px 5rem;
+  /* padding: 40px 5rem; */
 }
 .feature-image img{
   width: 64px;
   height: 64px;
+ margin-left:7.2rem
 }
 .features{
   padding:2rem 2rem;
   display:grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns:2fr 2fr 2fr 2fr;
   gap:80px;
+  margin-bottom:2rem;
 }
 .feature{
   display:grid;
@@ -272,6 +283,7 @@ footer{
 .feature-title{
   margin-top:10px;
   margin-bottom:10px;
+  text-align: center;
 }
 .feature-para{
   text-align: center;
