@@ -1,18 +1,25 @@
+/* reset + base */
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700,400&display=swap');
+
+body{
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #333;
+  background: #f6f8fa;
+}
+
+/* header */
 header{
     display:flex;
     justify-content: space-between;
     margin:0 auto;
-    /* padding-top:2rem; */
     padding:2.3rem 5rem;
-    font-family: sans-serif;
-    align-items: center;;
-    padding-bottom:0;
-
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
 }
 .logo{
     color:rgb(97, 97, 97);
@@ -20,249 +27,202 @@ header{
     font-size:1.5rem;
     margin-left:50px;
 }
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
-
-nav li{
-    list-style:none;
-    position:relative;
-    margin:0 20px;
-}
 nav ul{
     display:flex;
     gap:20px;
-    vertical-align: middle;
-    text-decoration: none;
 }
 nav a{
     text-decoration: none;
     color:darkgray;
-    display:block;
     padding:5px 0;
-    font-family:'Open Sans', sans-serif;
     font-size:16px;
-    line-height:1;
     font-weight:bold;
     position:relative;
     z-index:1;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-        to right,
-        #0099FF,
-        #0099FF 50%,
-        darkgray 50%);
+    background-image: linear-gradient(to right,#0099FF,#0099FF 50%,darkgray 50%);
     background-size: 200% 100%;
     background-position: -100%;
-    transition: all 0.3s ease-in-out;
-}
-nav a:before{
-    display:block;
-    content:'';
-    width:0;
-    height:3px;
-    bottom:-3px;
-    left:0;
-    z-index:0;
-    position:absolute;
-    background:#0099FF;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     transition: all 0.3s ease-in-out;
 }
 nav a:hover{
     background-position: 0%;
 }
-nav a:hover:before{
-    width:100%;
-}
 .username{
     background-color:#0099FF;
     padding:1rem 2rem;
     border-radius:10px;
+    color:white;
 }
-.section-main{
-    /* height:100vh; */
-    padding-bottom: 0;
-}
+
+/* hero */
+.section-main{ padding-bottom: 0; }
 .section-hero{
     margin:5rem auto;
     margin-bottom:0;
     padding:0 3rem;
     display:grid;
     grid-template-columns:2fr 1fr;
-    /* height:100vh; */
-    /* gap:100px; */
 }
-
 .hero-image img{
     height:450px;
     width:100%;
-    margin:0 auto;
-    text-align: center;
+    object-fit:contain;
 }
-.left-div{
-        padding-left:4.2rem;
-}
+.left-div{ padding-left:4.2rem; }
+.tagline{ font-size:1.9rem; max-width: 90%; padding-top:3%; margin-bottom:15px; color:rgb(97,97,97); }
+.tag-paragraph{ font-size:19px; max-width:500px; color:rgb(97, 97, 97); font-weight:300; margin-bottom:15px; }
+.booking-btn{ background-color:#0099FF; margin-right:600px; border-radius: 10px; }
+.contain{ display:flex; align-items:center; padding:1rem 2rem; padding-left:2rem; }
+.contain a{ color:white; text-decoration:none; }
 
-.tagline{
-    font-size:1.9rem;
-    max-width: 90%;
-    padding-top:3%;
-    margin-bottom:15px;
-    font-family: sans-serif;
-    color:rgb(97, 97, 97);
-}
-.tag-paragraph{
-    font-size:19px;
-    max-width:500px;
-    word-spacing: 5px;
-    /* letter-spacing: 1px; */
-    font-family: sans-serif;
-    color:rgb(97, 97, 97);
-    font-weight:300;
-    margin-bottom:15px;
-}
-.booking-btn{
-   background-color:#0099FF;
-   margin-right:600px;
-   border-radius: 10px;
+/* hero footer */
+.hero-footer{ height:20vh; background-color:#0099FF; margin-top:50px; display:flex; align-items:center; justify-content:center; color:white; }
+.main-container{ display:flex; align-items:center; justify-content:center; gap:150px; width:100%; }
+.left-div h2{ font-size:2.5rem; }
 
-   ;
-
-}
-.icon{
-    margin-right:10px;
-    font-size:20px;
-    color:white;
-
-}
-.contain a{
-    text-decoration: none;
-    color:white;
-    font-family: sans-serif;
-}
-.contain{
-      display: flex;
-align-items: center;
-    padding:1rem 2rem;
-    padding-left:2rem;
-}
-.hero-footer{
-    height:20vh;
-    background-color:#0099FF;
-    margin-top:50px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.main-container{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:150px;
-  font-family: sans-serif;
-  width:100%;
-}
-.left-div h2{
-  font-size:2.5rem;
-}
-.right-div{
-  display:flex;
-  gap:100px;
-  font-size:1.1rem;
-
-}
-.services h2{
-  color:rgb(52, 52, 52);
-  margin-bottom:10px;
-  font-size:2rem
-}
-.services p{
-  color:darkgray;
-  font-weight: bold;
-}
+/* booking / services area */
 .section-booking{
     margin:0 auto;
-    padding:10rem 5rem;
-    height:100vh;
-    font-family: sans-serif;
+    padding:6rem 5rem;
+    /* height:100vh; removed fixed height so page flows */
 }
 .container {
   display: flex;
   gap: 30px;
-}
-.services{
-  border-bottom:1px solid darkgray; 
+  align-items: flex-start;
+  width: 100%;
 }
 
+/* card styles for services and cart */
 .services, .cart {
   background: #fff;
-  padding: 20px;
+  padding: 28px;
   width: 50%;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(20,20,30,0.06);
 }
 
+/* Services heading */
+.services h2{
+  color:rgb(52, 52, 52);
+  margin-bottom:10px;
+  font-size:2rem;
+}
+.services p{
+  color:darkgray;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* Service row */
 .service-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  margin-top:20px;
-  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.service-item h3 {
-  margin: 0;
-  margin-right:10px;
-  font-size: 20px;
-  color:#999898
-
+/* left group inside a service row: icon + name */
+.service-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0; /* allow text truncation if needed */
 }
-#serviceList{
-  display:flex;
+
+.service-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+/* name + small subtitle */
+.service-name-wrap {
+  display: flex;
   flex-direction: column;
+  min-width: 0;
 }
-/* .price {
-  text-align: center;
-  font-weight: 600;
-  color: #0d6efd;
-} */
 
+.service-name {
+  margin: 0;
+  font-size: 18px;
+  color: #3a3a3a;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.service-subtitle {
+  font-size: 12px;
+  color: #9aa0a6;
+  margin-top: 4px;
+}
+
+/* right group: price + button */
+.service-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.price {
+  font-weight: 700;
+  color: #0d6efd;
+  min-width: 90px;
+  text-align: right;
+}
+
+/* buttons */
 .btn {
   padding: 8px 14px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
+  transition: transform .12s ease, box-shadow .12s ease;
 }
+
+.btn:active { transform: translateY(1px); }
 
 .add {
   background: #0d6efd;
   color: white;
+  box-shadow: 0 6px 14px rgba(13,110,253,0.16);
 }
 
 .remove {
   background: #ff5b5b;
   color: white;
+  box-shadow: 0 6px 14px rgba(255,91,91,0.12);
 }
 
+/* Cart table and form */
 #cartTable {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 14px;
 }
 
 #cartTable th,
 #cartTable td {
   padding: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #f0f0f0;
   text-align: left;
+  font-size: 14px;
 }
 
 .total {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 18px 0;
   font-size: 18px;
   font-weight: bold;
 }
@@ -271,8 +231,9 @@ form input {
   width: 100%;
   padding: 12px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background: #fbfbfb;
 }
 
 form button {
@@ -282,42 +243,30 @@ form button {
   border: none;
   color: #fff;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
+/* footer & other sections (kept from original, minor tweaks) */
 footer{
-  height:100vh;
   margin:2rem auto;
   font-family:sans-serif;
-
+  padding: 40px 5rem;
 }
 .feature-image img{
   width: 64px;
   height: 64px;
 }
-.feature-image{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.features{ padding:2rem 2rem;
-  
-  /* width:100vh; */
-
- display:grid;
- grid-template-columns: 2fr 2fr 2fr 2fr;
- justify-content: center;
- gap:80px;
-
+.features{
+  padding:2rem 2rem;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:80px;
 }
 .feature{
   display:grid;
   justify-content: center;
   align-items: center;
-  
-
 }
 .feature-title{
   margin-top:10px;
@@ -328,56 +277,42 @@ footer{
   color:darkgray;
   font-weight: 400;
 }
-
-.feature-title{
-  text-align:center;
-
-}
 .newsletter{
   background-color: #0099FF;
   height:300px;
   margin-top:30px;
   display:flex;
-justify-content: center;
-align-items: center;
-gap:200px
-
+  justify-content: center;
+  align-items: center;
+  gap:200px;
 }
 .newsletter-form{
   display:grid;
   grid-template-columns: 2fr 2fr;
   gap:20px;
-
 }
 .title{
   color:white;
   font-size:2rem;
 }
 .final-footer{
-  background-color: rgb(224, 223, 223);;
+  background-color: rgb(224, 223, 223);
   height:300px;
   display:grid;
   justify-content: center;
   align-items: center;
-
 }
 .comt{
-  /* padding:5rem 5rem; */
   display:grid;
-  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-columns: repeat(4, 1fr);
   gap:50px;
   padding-left:8rem;
   padding-top:4rem;
-  /* text-align: center; */
-  
-
-
 }
 .main-title{
   font-size:1.6rem;
   margin-bottom:40px;
   text-align: left;
-
 }
 .ttle{
   margin-bottom:10px;
@@ -388,25 +323,32 @@ gap:200px
 .content ul {
   list-style: none;
   text-align: left;
-
-  
 }
 .content li a{
   text-decoration: none;
-  color:gray
+  color:gray;
 }
-.socials{
-  display:flex;
-  gap:10px;
 
+/* messages */
+.message{ margin-top:20px; text-align: center; color:green; }
+.nomessage{ color:red; margin-top:20px; text-align: center; }
+
+/* small screens responsiveness to avoid overlap */
+@media (max-width: 980px) {
+  .section-hero { grid-template-columns: 1fr; padding: 1rem; }
+  header { padding: 1rem; }
+  .container { flex-direction: column; padding: 0 1rem; }
+  .services, .cart { width: 100%; padding: 18px; }
+  .price { min-width: 80px; font-size: 15px; text-align: left; }
+  .service-name { white-space: normal; }
+  .service-right { justify-content: flex-end; gap: 8px; }
+  .features { grid-template-columns: 1fr 1fr; gap: 30px; }
 }
-.message{
-  margin-top:20px;
-  text-align: center;
-  color:green;
-}
-.nomessage{
-  color:red;
-  margin-top:20px;
-  text-align: center
+
+/* very small devices */
+@media (max-width: 520px) {
+  nav ul { display: none; }
+  .service-icon { width: 36px; height: 36px; }
+  .service-name { font-size: 16px; }
+  .btn { padding: 8px 10px; font-size: 14px; }
 }
